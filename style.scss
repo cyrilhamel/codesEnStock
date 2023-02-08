@@ -1,0 +1,184 @@
+/*Carousel Haut de page*/
+body {
+    margin: 0;
+    background:#2A2734;
+    text-align: center;
+    font-family: sans-serif;
+    color:#fefefe;
+}
+
+.container{
+    position: relative;
+    width: 320px;
+    margin: 100px auto 0 auto;
+    perspective: 1000px;
+}
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate360 60s infinite forwards linear;
+}
+
+.image{
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.5);
+    display: flex;
+}
+
+span{
+    margin: auto;
+    font-size: 2rem;
+}
+
+@keyframes rotate360{
+    from{transform:rotateY(0deg);
+    }
+    to{
+        transform: rotateY(-360deg);
+    }
+}
+
+.image:nth-child(1){
+    background-image: url("https://picsum.photos/420/300?random=1");
+    transform: rotateY(0deg) translateZ(430px);
+}
+.image:nth-child(2){
+    background-image: url("https://picsum.photos/420/300?random=2");
+    transform: rotateY(40deg) translateZ(430px);
+}
+.image:nth-child(3){
+    background-image: url("https://picsum.photos/420/300?random=3");
+    transform: rotateY(80deg) translateZ(430px);
+}
+.image:nth-child(4){
+    background-image: url("https://picsum.photos/420/300?random=4");
+    transform: rotateY(120deg) translateZ(430px);
+}
+.image:nth-child(5){
+    background-image: url("https://picsum.photos/420/300?random=5");
+    transform: rotateY(160deg) translateZ(430px);
+}
+.image:nth-child(6){
+    background-image: url("https://picsum.photos/420/300?random=6");
+    transform: rotateY(200deg) translateZ(430px);
+}
+.image:nth-child(7){
+    background-image: url("https://picsum.photos/420/300?random=7");
+    transform: rotateY(240deg) translateZ(430px);
+}
+.image:nth-child(8){
+    background-image: url("https://picsum.photos/420/300?random=8");
+    transform: rotateY(280deg) translateZ(430px);
+}
+.image:nth-child(9){
+    background-image: url("https://picsum.photos/420/300?random=9");
+    transform: rotateY(320deg) translateZ(430px);
+}
+/*Fin Carousel Haut de page*/
+
+/*livre*/
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+*{
+    padding:0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+$bookAngle: 60deg;
+$speed: 5s;
+$borderColor: #555;
+$images:
+    url('https://picsum.photos/420/300?random=?random=1'),
+    url('https://picsum.photos/420/300?random=?random=2'),
+    url('https://picsum.photos/420/300?random=?random=3'),
+    url('https://picsum.photos/420/300?random=?random=4'),
+    url('https://picsum.photos/420/300?random=?random=5'),
+    url('https://picsum.photos/420/300?random=?random=1');
+
+
+    .imgLoader{
+        font-family: 'Indie Flower', cursive;
+        background-color: #eee;
+        color:#555;
+        text-align: center;
+        padding:4em 0;
+        position: fixed;
+        animation: preLoad 1s steps(1);
+        width: 1px;
+        height: 1px;
+    
+        @keyframes preLoad {
+            @for $i from 0 through 4{
+                #{$i * 10}% {
+                    background-image: nth($images,($i + 1));
+                }
+            }
+            100%{ display: none; }
+        }
+    }
+
+    .container {
+        position: relative;
+        width: 420px;
+        border: #fff solid 2px;
+        border-radius: 4px;
+        height: 420px;
+    }
+
+    .title{
+        position: absolute;
+        top: 45px; left: 0;
+        width: 100%;
+        font-size: 2em;
+        font-weight: normal;
+        line-height: 1;
+    }
+
+    .credit{
+        position: absolute;
+        top:100%; left:0;
+        font-size:0.9em;
+        text-align: left;
+    }
+
+    .book{
+        position:relative;
+        perspective: 630px;
+        perspective-origin: center 50px;
+        transform: scale(1.2);
+        filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.25));
+    }
+
+    .page{
+        width: 210px;
+        height: 300px;
+        background-color: #bbb;
+        position: absolute;
+        top: 0px; right: 50%;
+        transform-origin: 100% 100%;
+        border: solid $borderColor 2px;
+        background-size: 420px 300px;
+        background-position: center;
+        transform-style: preserve-3d;
+    }
+
+    &:nth-child(1) {
+        transform: rotateX('$bookAngle') rotateY('3deg');
+    }
+
+
+
+
+
+/*Fin du livre*/
