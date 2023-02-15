@@ -174,11 +174,42 @@ $images:
     }
 
     &:nth-child(1) {
-        transform: rotateX('$bookAngle') rotateY('3deg');
+        transform: rotateY('$bookAngle') rotateY('3deg');
     }
+&:nth-child(2) {
+        transform: rotateY('$bookAngle') rotateY('4,5deg');
+    }
+&:nth-child(3) {
+        transform: rotateX('$bookAngle') rotateY('6deg');
+        animation: nextPage $speed*5 infinite
+        $speed*-4.8 steps(1);
+        background-size: 428px 300px;
+        background-position: -2px -2px;
+    }
+&:nth-child(4) {
+        transform: rotateY('$bookAngle') rotateY('177deg');
+    }
+&:nth-child(5) {
+        transform: rotateY('$bookAngle') rotateY('175.5deg');
+    }
+    &:nth-child(6) {
+        transform: rotateX('$bookAngle') rotateY('174deg');
+        overflow: hidden;
 
-
-
-
+        &::after{
+            content:'';
+            width: 210px;
+            height: 300px;
+            position: absolute;
+            top: 0px; right: 0%;
+            transform-origin: center;
+            transform: rotateY(180deg);
+            animation: nextPage $speed*5
+            $speed*-4 infinite steps(1);
+            background-size: 420px 300px;
+            background-position: 100% -2px;
+            
+        }
+    }
 
 /*Fin du livre*/
