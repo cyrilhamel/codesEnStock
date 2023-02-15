@@ -1,5 +1,4 @@
 /*Carousel Haut de page*/
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 body {
   margin: 0;
   background: #2A2734;
@@ -91,22 +90,4 @@ span {
 .image:nth-child(9) {
   background-image: url("https://picsum.photos/420/300?random=9");
   transform: rotateY(320deg) translateZ(430px);
-}
-
-/*Fin Carousel Haut de page*/
-/*livre*/
-* {
-  padding: 0;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-.imgLoader {
-  font-family: "Indie Flower", cursive;
-  background-color: #eee;
-  color: #555;
-  text-align: center;
-  padding: 4em 0;
-}
-
-/*Fin du livre*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
