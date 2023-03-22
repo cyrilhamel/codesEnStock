@@ -1,0 +1,38 @@
+:root{
+    --range:0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #090221;
+}
+section{
+    display: flex;
+}
+.circle{
+    margin: 0 2rem;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: conic-gradient(#25d366 0%, #25d366 var(--range), #2c273d var(--range), #2c273d 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.value{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
+.overlay{
+    position: relative;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 140px;
+    background-color: #090221
+}
