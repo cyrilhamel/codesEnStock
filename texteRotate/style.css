@@ -11,7 +11,6 @@ p {
   position: relative;
   width: 300px;
   height: 300px;
-  animation: effect 8s linear inifinite;
 }
 
 span {
@@ -21,13 +20,4 @@ span {
   transform-origin: 0 150px;
   text-transform: uppercase;
   color: #fff;
-}
-
-@keyframes effect {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
 }/*# sourceMappingURL=style.css.map */
