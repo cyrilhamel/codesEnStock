@@ -1,0 +1,17 @@
+:root{
+    --duration: 2s;
+    --outer-delay: 0.2s;
+    --main-delay: 0.3s;
+    --ease: cubic-bezier(0.17, 0.67, 0.34, 0.99);
+    --image-size: 140vh;
+}
+
+*,
+*:before,
+*::after {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    transform-origin: center center;
+}
+
