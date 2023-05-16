@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+}
+
+.banner {
+  background-color: #131416;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-title {
+  font-size: 10em;
+  font-family: arial;
+  background-image: url("https://picsum.photos/420/300?random=4");
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}/*# sourceMappingURL=style.css.map */
