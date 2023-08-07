@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Bienvenue <a target="_blank" href="https://icons8.com/icon/G2JOznDoz5oG/pinching-hand">Pinching Hand</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>"
+AuthUserFile /home/u195828696/domains/calytia.fr/mdp/.htpasswd
+require valid-user
